@@ -1,0 +1,71 @@
+name: User Story
+description: Create a user story to detail a new feature or improvement.
+title: "[Feature]: "
+labels: ["big-feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is designed to capture and organize all the key details needed to deliver a user-centered feature, with the goal is to ensure alignment among team members, facilitate smooth implementation, and maintain a user-focused approach throughout the development process.
+  - type: textarea
+    id: introduction
+    attributes:
+      label: Introduction
+      description: A brief explanation of the feature or story, including its purpose and how it fits into the overall project or user workflow. This helps stakeholders understand the broader context.
+      placeholder: Filtering products by category is a key feature for enhancing user experience on our e-commerce platform. It allows customers to quickly narrow down their options, making it easier to find the desired products. This is part of our broader effort to improve search functionality and increase conversion rates.
+    validations:
+      required: true
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      description: A short, simple description of a feature or functionality from the perspective of an end user, focusing on their needs and goals.
+      placeholder: As a [type of user], I want [a feature or capability], So that [a goal or benefit].
+    validations:
+      required: true
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Business value
+      description: Why this story is important from a business perspective
+      placeholder: Improves user satisfaction by reducing search time.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Acceptance Criteria are specific, measurable conditions that a feature or functionality must meet for it to be considered complete and acceptable. They act as a checklist for developers, testers, and stakeholders to ensure the user story fulfills the intended requirements.
+      placeholder: |
+        * The system should display only products within the selected category when a category is chosen from the dropdown.
+        * If no products exist in the selected category, a message should be displayed stating “No products found.”
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Any dependencies on other tasks, features, or external systems.
+      placeholder: The “Filter products by category” feature depends on the completion of the “Product categories API integration” task.
+    validations:
+      required: false
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Notes / Implementation Details
+      description: Additional technical context or constraints.
+      placeholder: |
+        * The product filter will use a RESTful API to fetch product data filtered by category.
+        * The filtering logic should be implemented on the frontend using JavaScript and connected to the API via AJAX calls.
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: Attachments or References
+      description: Links to mockups, designs, or documentation that support the story.
+      placeholder: |
+        * UI Mockups: Link to Wireframe for Product Category Filter Detailed UI Design
+        * API Documentation: Link to Product Categories API Docs Authentication API Specs
+    validations:
+      required: false
