@@ -1,0 +1,42 @@
+name: "Stakeholder Request"
+description: "Request a new feature, change or improvement to the product"
+title: "[Request]: Your title here"
+labels: ["request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thank you for submitting a feature request!
+        Please answer the following questions to help us understand your idea better.
+
+  - type: dropdown
+    validations:
+      required: false
+    attributes:
+      label: "What kind of request?"
+      options:
+        - New feature
+        - Change
+        - Improvement
+      default: 0
+
+  - type: input
+    id: request-summary
+    attributes:
+      label: "What is the request?"
+      description: "Briefly summarize the feature you would like to see."
+      placeholder: "E.g., Add a dark mode option to the app"
+
+  - type: textarea
+    id: reason-needed
+    attributes:
+      label: "Why is this needed?"
+      description: "Explain the context and why this feature is important."
+      placeholder: "e.g. Users frequently request dark mode and competitors already offer it, making our app less competitive."
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: "What is the business value?"
+      description: "Describe how this feature benefits the business."
+      placeholder: "E.g., Expected to increase customer retention."
