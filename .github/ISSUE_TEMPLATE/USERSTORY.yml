@@ -1,71 +1,79 @@
 name: User Story
 description: Create a user story to detail a new feature or improvement.
 title: "[Feature]: "
-labels: ["big-feature"]
+labels: ["feature"]
 body:
   - type: markdown
     attributes:
       value: |
-        This template is designed to capture and organize all the key details needed to deliver a user-centered feature, with the goal is to ensure alignment among team members, facilitate smooth implementation, and maintain a user-focused approach throughout the development process.
+        This template is designed to capture and organize all the key details needed to deliver a user-centered feature. The goal is to ensure alignment among team members, facilitate smooth implementation, and maintain a user-focused approach throughout the development process.
+
   - type: textarea
     id: introduction
     attributes:
       label: Introduction
       description: A brief explanation of the feature or story, including its purpose and how it fits into the overall project or user workflow. This helps stakeholders understand the broader context.
-      placeholder: Filtering products by category is a key feature for enhancing user experience on our e-commerce platform. It allows customers to quickly narrow down their options, making it easier to find the desired products. This is part of our broader effort to improve search functionality and increase conversion rates.
+      placeholder: Allowing users to sort their transactions by date will improve navigation and user satisfaction. This is part of our ongoing effort to enhance user experience in the dashboard.
     validations:
       required: true
+
   - type: textarea
     id: user-story
     attributes:
       label: User story
       description: A short, simple description of a feature or functionality from the perspective of an end user, focusing on their needs and goals.
-      placeholder: As a [type of user], I want [a feature or capability], So that [a goal or benefit].
+      placeholder: As a user, I want to sort my transactions by date, so that I can easily find recent or older entries.
     validations:
       required: true
+
   - type: textarea
     id: business-value
     attributes:
       label: Business value
-      description: Why this story is important from a business perspective
-      placeholder: Improves user satisfaction by reducing search time.
+      description: Why this story is important from a business perspective.
+      placeholder: Improves user satisfaction by simplifying access to recent or older transactions and reducing frustration.
     validations:
       required: true
+
   - type: textarea
     id: acceptance-criteria
     attributes:
       label: Acceptance criteria
       description: Acceptance Criteria are specific, measurable conditions that a feature or functionality must meet for it to be considered complete and acceptable. They act as a checklist for developers, testers, and stakeholders to ensure the user story fulfills the intended requirements.
       placeholder: |
-        * The system should display only products within the selected category when a category is chosen from the dropdown.
-        * If no products exist in the selected category, a message should be displayed stating “No products found.”
+        - [] Users can sort transactions in ascending or descending order by date.
+        - [] The sorting feature must work seamlessly on desktop and mobile devices.
+        - [] The system retains the selected sorting preference for the session.
     validations:
       required: true
+
   - type: textarea
     id: dependencies
     attributes:
       label: Dependencies
       description: Any dependencies on other tasks, features, or external systems.
-      placeholder: The “Filter products by category” feature depends on the completion of the “Product categories API integration” task.
+      placeholder: The "Sort transactions by date" feature depends on the completion of the "Transactions API update" task to include sorting functionality.
     validations:
       required: false
+
   - type: textarea
     id: technical-details
     attributes:
       label: Technical Notes / Implementation Details
       description: Additional technical context or constraints.
       placeholder: |
-        * The product filter will use a RESTful API to fetch product data filtered by category.
-        * The filtering logic should be implemented on the frontend using JavaScript and connected to the API via AJAX calls.
+        * Sorting logic will be implemented on the frontend using JavaScript and passed as parameters to the Transactions API.
+        * Backend must support sorting parameters (e.g., "sort_by=date&order=desc").
     validations:
       required: false
+
   - type: textarea
     id: references
     attributes:
       label: Attachments or References
       description: Links to mockups, designs, or documentation that support the story.
       placeholder: |
-        * UI Mockups: Link to Wireframe for Product Category Filter Detailed UI Design
-        * API Documentation: Link to Product Categories API Docs Authentication API Specs
+        * Wireframe: Link to Sort Transactions Wireframe
+        * API Documentation: Link to Transactions API Docs
     validations:
       required: false

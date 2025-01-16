@@ -1,4 +1,4 @@
-name: "Stakeholder Request"
+name: "New Feature or change"
 description: "Request a new feature, change or improvement to the product"
 title: "[Request]: Your title here"
 labels: ["request"]
@@ -21,6 +21,8 @@ body:
       default: 0
 
   - type: input
+    validations:
+      required: true
     id: request-summary
     attributes:
       label: "What is the request?"
@@ -28,6 +30,8 @@ body:
       placeholder: "E.g., Add a dark mode option to the app"
 
   - type: textarea
+    validations:
+      required: true
     id: reason-needed
     attributes:
       label: "Why is this needed?"
@@ -35,6 +39,8 @@ body:
       placeholder: "e.g. Users frequently request dark mode and competitors already offer it, making our app less competitive."
 
   - type: textarea
+    validations:
+      required: true
     id: business-value
     attributes:
       label: "What is the business value?"
